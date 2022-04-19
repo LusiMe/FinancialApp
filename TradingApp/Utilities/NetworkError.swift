@@ -2,7 +2,7 @@
 //  NetworkError.swift
 //  TradingApp
 //
-//  Created by Mark Parfenov on 06/04/2022.
+//  Created by Luda Parfenova on 06/04/2022.
 //
 
 import Foundation

@@ -2,20 +2,20 @@
 //  AddTransactionViewController.swift
 //  TradingApp
 //
-//  Created by Mark Parfenov on 10/04/2022.
+//  Created by Luda Parfenova on 10/04/2022.
 //
 
 import UIKit
 
 class AddTransactionViewController: UIViewController {
-
+    
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var companyNameInput: UITextField!
     @IBOutlet weak var amoundInput: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     @IBAction func addTransactionClicked(_ sender: Any) {
@@ -23,12 +23,13 @@ class AddTransactionViewController: UIViewController {
         //present success message
     }
     private func addTransaction() {
-        let date = "\(datePicker.date)"
+        
         if companyNameInput.text != nil, amoundInput.text != nil {
+            let date = "\(datePicker.date)"
             let companyName = companyNameInput.text!
-        let transactionAmound = amoundInput.text!
-        ServerCommunication.sharedInstance.postCall(date: date, company: companyName, amound: transactionAmound)
+            let transactionAmound = Int(amoundInput.text!)!
+            FirebaseCommunication.sharedInstance.postTransaction(amount: transactionAmound, company: companyName, date: date)
         }
     }
-
+    
 }

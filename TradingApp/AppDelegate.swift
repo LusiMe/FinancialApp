@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TradingApp
 //
-//  Created by Mark Parfenov on 03/04/2022.
+//  Created by Luda Parfenova on 03/04/2022.
 //
 
 import UIKit

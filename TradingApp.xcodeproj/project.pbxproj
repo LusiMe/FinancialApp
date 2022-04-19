@@ -14,6 +14,8 @@
 		C6C08DBE2802F05B004C6099 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C08DBD2802F05B004C6099 /* AddTransactionViewController.swift */; };
 		C6C08DC3280450C3004C6099 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6C08DC2280450C3004C6099 /* GoogleService-Info.plist */; };
 		C6C08DCE28055F1E004C6099 /* FirebaseCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C08DCD28055F1E004C6099 /* FirebaseCommunication.swift */; };
+		C6C2CFB9280ECE030082CDF6 /* TransactiomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2CFB8280ECE030082CDF6 /* TransactiomModel.swift */; };
+		C6C2CFBC280EF0580082CDF6 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2CFBB280EF0580082CDF6 /* TransactionTableViewCell.swift */; };
 		C6F0E3DD27F97A9A00B95C37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F0E3DC27F97A9A00B95C37 /* AppDelegate.swift */; };
 		C6F0E3DF27F97A9A00B95C37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F0E3DE27F97A9A00B95C37 /* SceneDelegate.swift */; };
 		C6F0E3E127F97A9A00B95C37 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F0E3E027F97A9A00B95C37 /* BalanceViewController.swift */; };
@@ -34,6 +36,8 @@
 		C6C08DBD2802F05B004C6099 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		C6C08DC2280450C3004C6099 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C6C08DCD28055F1E004C6099 /* FirebaseCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCommunication.swift; sourceTree = "<group>"; };
+		C6C2CFB8280ECE030082CDF6 /* TransactiomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactiomModel.swift; sourceTree = "<group>"; };
+		C6C2CFBB280EF0580082CDF6 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		C6F0E3D927F97A9A00B95C37 /* TradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F0E3DC27F97A9A00B95C37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6F0E3DE27F97A9A00B95C37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				C675891F27FD879A001E0A90 /* BalanceModel.swift */,
+				C6C2CFB8280ECE030082CDF6 /* TransactiomModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				C6F0E3DC27F97A9A00B95C37 /* AppDelegate.swift */,
 				C6F0E3DE27F97A9A00B95C37 /* SceneDelegate.swift */,
 				C6F0E3E227F97A9A00B95C37 /* Main.storyboard */,
+				C6C2CFBB280EF0580082CDF6 /* TransactionTableViewCell.swift */,
 				C6F0E3E527F97A9F00B95C37 /* Assets.xcassets */,
 				C6F0E3E727F97A9F00B95C37 /* LaunchScreen.storyboard */,
 				C6C08DC2280450C3004C6099 /* GoogleService-Info.plist */,
@@ -256,8 +262,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6C08DBB2802D1E1004C6099 /* TransactionsTableViewController.swift in Sources */,
+				C6C2CFBC280EF0580082CDF6 /* TransactionTableViewCell.swift in Sources */,
 				C6C08DCE28055F1E004C6099 /* FirebaseCommunication.swift in Sources */,
 				C6F0E3E127F97A9A00B95C37 /* BalanceViewController.swift in Sources */,
+				C6C2CFB9280ECE030082CDF6 /* TransactiomModel.swift in Sources */,
 				C6F0E3DD27F97A9A00B95C37 /* AppDelegate.swift in Sources */,
 				C675891C27FD835B001E0A90 /* NetworkError.swift in Sources */,
 				C675892027FD879A001E0A90 /* BalanceModel.swift in Sources */,

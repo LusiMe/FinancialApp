@@ -174,7 +174,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transactionCell" id="WEV-zC-axX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transactionCell" id="WEV-zC-axX" customClass="TransactionTableViewCell" customModule="TradingApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WEV-zC-axX" id="njO-aE-B2D">
@@ -201,6 +201,10 @@
                                         <constraint firstAttribute="trailing" secondItem="pCG-T1-1YU" secondAttribute="trailing" constant="20" symbolic="YES" id="yFP-nq-q9R"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="amount" destination="pCG-T1-1YU" id="YQr-g3-pPI"/>
+                                    <outlet property="companyName" destination="wXc-6J-wTn" id="BIW-mB-i9e"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

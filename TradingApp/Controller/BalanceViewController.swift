@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TradingApp
 //
-//  Created by Mark Parfenov on 03/04/2022.
+//  Created by Luda Parfenova on 03/04/2022.
 //
 
 import UIKit
@@ -18,7 +18,6 @@ class BalanceViewController: UIViewController {
     }
 
     func completion(result: BalanceModel) {
-        print("result ",result)
         DispatchQueue.main.async {
             self.balanceLabel.text = "\(result.amount)" + " " + result.currency
         }
