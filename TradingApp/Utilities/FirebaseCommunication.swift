@@ -30,8 +30,8 @@ class FirebaseCommunication {
         
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                let transactions = document.data()!["transaction"] as! [[String: Any]]
-                let data = transactions.map{ TransactionModel(snapshot: $0) }
+                let transactions = document.data()!["transaction"] as! [String: Any]
+                let data = transactions.map{ TransactionModel(snapshot: $0.value as! [String : Any]) }
                 completion(data)
             } else {
                 print("Document does not exist")
@@ -55,18 +55,4 @@ class FirebaseCommunication {
 //        }
 //           }
     
-    public func postTransaction(amount: Int, company: String, date: String) {
-        let docRef = db.collection("finance").document("transaction").updateData(["transaction": [
-            "amount": amount,
-            "company": company,
-            "date": date
-        ]])
-        { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written")
-            }
-        }
-           }
 }

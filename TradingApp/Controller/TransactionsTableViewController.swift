@@ -39,7 +39,7 @@ class TransactionsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath) as! TransactionTableViewCell
         cell.companyName.text = transactions[indexPath.row].company
-        cell.amount.text = String(transactions[indexPath.row].amount)
+        cell.amount.text = String(transactions[indexPath.row].amount ?? 0)
         return cell
     }
     /*

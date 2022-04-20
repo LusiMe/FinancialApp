@@ -9,13 +9,22 @@ import FirebaseFirestore
 import Firebase
 
 struct TransactionModel: Codable {
-    let company, date: String
-    let amount: Int
+    let company, date: String?
+    let amount: Int?
+
 
 init(snapshot: [String: Any]) {
-    company =  snapshot["company"] as! String
-    amount = snapshot["amount"] as! Int
-    date = snapshot["date"] as! String
+    company =  snapshot["company"] as? String
+    amount = snapshot["amount"] as? Int
+    date = snapshot["date"] as? String
   }
 }
 
+//struct TransactionModel: Codable {
+//    let id: ID
+//}
+//
+//struct ID: Codable {
+//    let company, date: String?
+//    let amount: Int?
+//}
