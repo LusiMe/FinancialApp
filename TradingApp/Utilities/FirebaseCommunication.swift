@@ -39,20 +39,23 @@ class FirebaseCommunication {
         }
     }
     
-//    public func postTransaction(amount: Int, company: String, date: String) {
-//        let docRef = db.collection("finance").document("transaction").setData([
-//            "amount": amount,
-//            "company": company,
-//            "date": date
-//        ],
-//        merge: true)
-//        { err in
-//            if let err = err {
-//                print("Error writing document: \(err)")
-//            } else {
-//                print("Document successfully written")
-//            }
-//        }
-//           }
-    
+    public func postTransaction(amount: Int, company: String, date: String) {
+        let id = UUID().uuidString
+        print("id", id)
+        let docRef = db.collection("finance").document("transaction").setData(["transaction": [
+            "id"+"\(id)": [
+                "amount": amount,
+                "company": company,
+                "date": date,
+                "id": id
+        ]]],
+        merge: true)
+        { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written")
+            }
+        }
+           }
 }

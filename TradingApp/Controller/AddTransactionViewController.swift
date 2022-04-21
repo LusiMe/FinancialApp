@@ -28,7 +28,7 @@ class AddTransactionViewController: UIViewController {
             let date = "\(datePicker.date)"
             let companyName = companyNameInput.text!
             let transactionAmound = Int(amoundInput.text!)!
-//            FirebaseCommunication.sharedInstance.postTransaction(amount: transactionAmound, company: companyName, date: date)
+            FirebaseCommunication.sharedInstance.postTransaction(amount: transactionAmound, company: companyName, date: date)
         }
     }
     
