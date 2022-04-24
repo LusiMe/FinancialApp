@@ -12,10 +12,12 @@ class FirebaseCommunication {
     
     public static let sharedInstance = FirebaseCommunication()
     
+    private let balanceRef = db.collection("finance").document("balance")
+    
+    private let transactionsRef = db.collection("finance").document("transaction")
+    
     public func getBalance(completion: @escaping(BalanceModel) -> Void) {
-        let docRef = db.collection("finance").document("balance")
-        
-        docRef.getDocument { (document, error) in
+        balanceRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let data = BalanceModel(snapshot: document )
                 completion(data)
@@ -26,9 +28,7 @@ class FirebaseCommunication {
     }
     
     public func getTransactions(completion: @escaping([TransactionModel]) -> Void) {
-        let docRef = db.collection("finance").document("transaction")
-        
-        docRef.getDocument { (document, error) in
+        transactionsRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let transactions = document.data()!["transaction"] as! [String: Any]
                 let data = transactions.map{ TransactionModel(snapshot: $0.value as! [String : Any]) }
@@ -41,8 +41,7 @@ class FirebaseCommunication {
     
     public func postTransaction(amount: Int, company: String, date: String) {
         let id = UUID().uuidString
-        print("id", id)
-        let docRef = db.collection("finance").document("transaction").setData(["transaction": [
+        transactionsRef.setData(["transaction": [
             "id"+"\(id)": [
                 "amount": amount,
                 "company": company,
@@ -58,4 +57,33 @@ class FirebaseCommunication {
             }
         }
            }
+    
+    func updateTransaction(id: String, amount: Int, company: String, date: String) {
+        transactionsRef.updateData(["transaction": [
+            "id"+"\(id)": [
+                "amount": amount,
+                "company": company,
+                "date": date,
+                "id": id
+        ]]])
+        { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written")
+            }
+        }
+    }
+    
+    func deleteTransaction(id: String, completion: @escaping(Bool, String) -> Void) {
+        transactionsRef.updateData(["transaction.id\(id)": FieldValue.delete()]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+                completion(false, id)
+            } else {
+                print("Document successfully updated")
+                completion(true, id)
+            }
+        }
+    }
 }

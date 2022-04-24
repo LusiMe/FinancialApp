@@ -64,7 +64,7 @@
         <!--Add transaction-->
         <scene sceneID="vfp-hU-1us">
             <objects>
-                <viewController id="ujW-nc-89c" customClass="AddTransactionViewController" customModule="TradingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="editViewController" id="ujW-nc-89c" customClass="AddTransactionViewController" customModule="TradingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="koK-Yd-LOe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,6 +141,7 @@
                     <navigationItem key="navigationItem" title="Add transaction" id="YqD-ID-Dfe"/>
                     <connections>
                         <outlet property="amoundInput" destination="mAk-tp-ZNn" id="WKC-5s-Iuw"/>
+                        <outlet property="button" destination="omN-Uo-lla" id="FoC-c0-wyB"/>
                         <outlet property="companyNameInput" destination="RfQ-nn-B65" id="QKl-kg-8kz"/>
                         <outlet property="datePicker" destination="Xqw-Pc-OmR" id="Use-9L-FGP"/>
                     </connections>
@@ -169,12 +170,12 @@
         <scene sceneID="0hM-9o-LXc">
             <objects>
                 <tableViewController id="LQA-hB-fj9" customClass="TransactionsTableViewController" customModule="TradingApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z8f-SG-IuT">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z8f-SG-IuT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transactionCell" id="WEV-zC-axX" customClass="TransactionTableViewCell" customModule="TradingApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transactionCell" editingAccessoryType="disclosureIndicator" id="WEV-zC-axX" customClass="TransactionTableViewCell" customModule="TradingApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WEV-zC-axX" id="njO-aE-B2D">
@@ -196,6 +197,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="wXc-6J-wTn" firstAttribute="leading" secondItem="njO-aE-B2D" secondAttribute="leading" constant="20" symbolic="YES" id="43D-5f-hSJ"/>
+                                        <constraint firstItem="pCG-T1-1YU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wXc-6J-wTn" secondAttribute="trailing" constant="8" symbolic="YES" id="7zJ-sN-5T2"/>
                                         <constraint firstItem="pCG-T1-1YU" firstAttribute="centerY" secondItem="njO-aE-B2D" secondAttribute="centerY" id="CkX-fp-nXl"/>
                                         <constraint firstItem="wXc-6J-wTn" firstAttribute="centerY" secondItem="njO-aE-B2D" secondAttribute="centerY" id="gYx-Ch-gLs"/>
                                         <constraint firstAttribute="trailing" secondItem="pCG-T1-1YU" secondAttribute="trailing" constant="20" symbolic="YES" id="yFP-nq-q9R"/>

@@ -12,4 +12,12 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var companyName: UILabel!
     @IBOutlet weak var amount: UILabel!
     
+    @IBOutlet weak var editCompanyName: UITextField!
+    @IBOutlet weak var editAmount: UITextField!
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
 }

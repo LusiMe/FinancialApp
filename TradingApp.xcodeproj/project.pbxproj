@@ -22,6 +22,7 @@
 		C6F0E3E427F97A9A00B95C37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F0E3E227F97A9A00B95C37 /* Main.storyboard */; };
 		C6F0E3E627F97A9F00B95C37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6F0E3E527F97A9F00B95C37 /* Assets.xcassets */; };
 		C6F0E3E927F97A9F00B95C37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F0E3E727F97A9F00B95C37 /* LaunchScreen.storyboard */; };
+		C6FC420D28156BC9002451E1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC420C28156BC9002451E1 /* TableViewCell.swift */; };
 		E1678623F1267B27D701DD1D /* Pods_TradingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E1ABC2B5461384C018C85D /* Pods_TradingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		C6F0E3E527F97A9F00B95C37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6F0E3E827F97A9F00B95C37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6F0E3EA27F97A9F00B95C37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6FC420C28156BC9002451E1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				C6F0E3DE27F97A9A00B95C37 /* SceneDelegate.swift */,
 				C6F0E3E227F97A9A00B95C37 /* Main.storyboard */,
 				C6C2CFBB280EF0580082CDF6 /* TransactionTableViewCell.swift */,
+				C6FC420C28156BC9002451E1 /* TableViewCell.swift */,
 				C6F0E3E527F97A9F00B95C37 /* Assets.xcassets */,
 				C6F0E3E727F97A9F00B95C37 /* LaunchScreen.storyboard */,
 				C6C08DC2280450C3004C6099 /* GoogleService-Info.plist */,
@@ -270,6 +273,7 @@
 				C675891C27FD835B001E0A90 /* NetworkError.swift in Sources */,
 				C675892027FD879A001E0A90 /* BalanceModel.swift in Sources */,
 				C6C08DBE2802F05B004C6099 /* AddTransactionViewController.swift in Sources */,
+				C6FC420D28156BC9002451E1 /* TableViewCell.swift in Sources */,
 				C675891927FD82FE001E0A90 /* URLSessionExtencion.swift in Sources */,
 				C6F0E3DF27F97A9A00B95C37 /* SceneDelegate.swift in Sources */,
 			);
